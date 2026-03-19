@@ -1,10 +1,12 @@
 services:
   app-dev:
+    user: root
     environment:
       HOME: /tmp/dev-home
+    entrypoint: []
     command:
       - sh
-      - -c
-      - "mkdir -p /tmp/dev-home && sed 's|/sbin/nologin|/bin/sh|' /etc/passwd > /tmp/passwd && cat /tmp/passwd > /etc/passwd && rm /tmp/passwd && exec sleep infinity"
+      - /devcontainer/setup.sh
     volumes:
       - ..:/workspace:cached
+      - .devcontainer/setup.sh:/devcontainer/setup.sh:ro

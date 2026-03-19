@@ -6,6 +6,7 @@
   ],
   "service": "app-dev",
   "workspaceFolder": "/workspace",
+  "containerUser": "1000",
   "overrideCommand": false,
   "shutdownAction": "stopCompose",
   "initializeCommand": {
