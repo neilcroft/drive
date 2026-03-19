@@ -6,9 +6,10 @@
   ],
   "service": "app-dev",
   "workspaceFolder": "/workspace",
-  "containerUser": "1000",
-  "overrideCommand": false,
+  "overrideCommand": true,
   "shutdownAction": "stopCompose",
+  "containerUser": "default",
+  "updateRemoteUserUID": false,
   "initializeCommand": {
     "network": "docker network create lasuite-network || true",
     "envfiles": "touch env.d/development/crowdin.local env.d/development/common.local env.d/development/postgresql.local env.d/development/kc_postgresql.local",

@@ -1,12 +1,12 @@
 services:
   app-dev:
-    user: root
-    environment:
-      HOME: /tmp/dev-home
-    entrypoint: []
-    command:
-      - sh
-      - /devcontainer/setup.sh
+    user: "default"
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+      target: ""
+      args:
+        BASE_IMAGE: drive:backend-development
+        DEV_UID: ${DOCKER_USER:-1000}
     volumes:
       - ..:/workspace:cached
-      - .devcontainer/setup.sh:/devcontainer/setup.sh:ro
