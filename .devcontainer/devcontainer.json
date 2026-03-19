@@ -6,8 +6,7 @@
   ],
   "service": "app-dev",
   "workspaceFolder": "/workspace",
-  "containerUser": "root",
-  "overrideCommand": true,
+  "overrideCommand": false,
   "shutdownAction": "stopCompose",
   "initializeCommand": {
     "network": "docker network create lasuite-network || true",
