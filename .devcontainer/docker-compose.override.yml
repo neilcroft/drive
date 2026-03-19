@@ -1,0 +1,6 @@
+services:
+  app-dev:
+    command: sleep infinity
+    user: root
+    volumes:
+      - ..:/workspace:cached
