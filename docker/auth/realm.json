@@ -65,6 +65,20 @@
         "realmRoles": ["user"]
       },
       {
+        "username": "drive2",
+        "email": "drive2@drive.world",
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "enabled": true,
+        "credentials": [
+          {
+            "type": "password",
+            "value": "drive2"
+          }
+        ],
+        "realmRoles": ["user"]
+      },
+      {
         "username": "user-e2e-chromium",
         "email": "user@chromium.test",
         "firstName": "E2E",
